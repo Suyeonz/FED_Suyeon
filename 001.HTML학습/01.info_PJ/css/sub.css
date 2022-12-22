@@ -424,7 +424,7 @@
 .pnews table{
     /* 가로중앙이동: 마영오 > 블록요소 또는 table에 적용됨(inline에는 적용안됨) */
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     /* 테이블 기본 사이간격 없애기 */
     border-collapse: collapse;
     /* seperate(기본값) */
