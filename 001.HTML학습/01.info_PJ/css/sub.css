@@ -421,7 +421,7 @@
 }
 
 /* 사진뉴스 테이블박스 */
-.pnews table{
+.pnews table {
     /* 가로중앙이동: 마영오 > 블록요소 또는 table에 적용됨(inline에는 적용안됨) */
     margin: 0 auto;
     border: 2px solid #ccc;
@@ -430,13 +430,22 @@
     /* seperate(기본값) */
 }
 
+/* 테이블 a요소 */
+/* 기존 .cont article a로 셋팅된것이 더 쎄기 때문에 여기서 윗 부모를 같은 레벨로 넣어서 선택하면 하위에 클래스가 요소(타입)보다 더 높기때문에 우선적용됨 */
+.cont .pnews a {
+    /* 글자크기 */
+    font-size: 14px;
+    /* 줄간격 */
+    line-height: 1.5;
+}
+
 /* 
     tr이나 td에 child 선택자를 사용가능
     왜? 같은 종류의 요소만 올 수 있으므로
 */
 
 /* 첫번째 td - 숫자부분 */
-.pnews td:first-child{
+.pnews td:first-child {
     /* 가로크기 w */
     width: 50px;
     /* 세로크기 h */
@@ -448,7 +457,7 @@
 }
 
 /* 두번째 td */
-.pnews td:nth-child(2){
+.pnews td:nth-child(2) {
     /* 배경색 */
     background-color: #f5f3f3;
     /* 양쪽패딩: 위아래 양쪽 */
@@ -456,14 +465,14 @@
 }
 
 /* 세번째 td */
-.pnews td:last-child{
+.pnews td:last-child {
     background-color: #f5f3f3;
     /* 오른쪽 패딩 */
     padding-right: 7px;
 }
 
 /* 사진뉴스 이미지 */
-.pnews img{
+.pnews img {
     height: 70px;
     /* 이미지는 한쪽만 크기줄때 나머지는 자동비율유지 */
     /* 세로정렬 */
@@ -472,7 +481,7 @@
 }
 
 /* 앞에 tr이 있는 tr만 하위 td에 디자인 */
-.pnews tr+tr td{
+.pnews tr + tr td {
     /* 보더탑 bdt */
     border-top: 2px solid #ccc;
 }
