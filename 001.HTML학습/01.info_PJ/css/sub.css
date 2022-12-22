@@ -17,19 +17,19 @@
 /* 본 CSS 설정 코드는 하단에 기입 */
 
 /* 메인영역박스 */
-.cont{
+.cont {
     /* 패딩 15px (기존 20px 재정의) */
     padding: 15px;
 }
 
 /* 2-1. 언론사로고 */
-.prlogo img{
+.prlogo img {
     height: 32px;
     /* 이미지는 가로, 세로 중 한쪽만 주면 자동 비율유지를 함 */
 }
 
 /* 2-2. 기사제목 */
-.atit{
+.atit {
     /* 글자크기 fz30 */
     font-size: 30px;
     /* 글자두께 보통 fwn */
@@ -52,18 +52,18 @@
 }
 
 /* 2-3. 기사사진(+사진설명) */
-.afig{
+.afig {
     /* 마진 m: 2개값 > 위아래 양쪽 */
     margin: 15px 0;
     /* 인라인 가로중앙: text-align tac */
     text-align: center;
 }
 /* 기사 이미지 */
-.afig img{
+.afig img {
     width: 100%;
 }
 /* 기사이미지 설명글 */
-.afig small{
+.afig small {
     /* 글자체: ff */
     font-family: Noto Serif KR;
     /* 글자크기: fz 
@@ -74,7 +74,7 @@
 }
 
 /* 2-4. 기사내용 */
-.arti p{
+.arti p {
     /* 글자크기: fz */
     font-size: 17px;
     /* 줄간격: lh
@@ -92,7 +92,7 @@
 }
 
 /* mark요소 변경하기 */
-.arti p mark{
+.arti p mark {
     /* 인라인을 블록으로 출신 변경 */
     display: block;
     /* 글자크기변경 */
@@ -115,7 +115,7 @@
 }
 
 /* p요소 아래 em요소 디자인 변경 */
-.arti p em{
+.arti p em {
     /* 글자그림자: text-shadow ts
     값: x축 y축 블러 색
     블러는 그림자 경계흐림정도 */
@@ -129,7 +129,7 @@
 }
 
 /* 2-5. 기자정보  */
-.rpt{
+.rpt {
     /* display 출신변경하기 디자인 적용과 동시에 인라인특성인
     글자만큼만 크기가 잡히도록 인라인블록으로 변경 */
     display: inline-block;
@@ -145,11 +145,11 @@
 
 /* 2-6. 기사원문
 별도의 이름없이 구조로만 기사원문을 선택 (직계자식) */
-.cont>h5{
+.cont > h5 {
     /* 내부의 인라인요소 오른쪽 정렬 */
     text-align: right;
 }
-.cont>h5>a{
+.cont > h5 > a {
     /* 디자인 적용 위해 display 변경 */
     display: inline-block;
     /* 기본없애기 */
@@ -172,7 +172,7 @@
 }
 
 /* 가상클래스로 오버시 박스그림자 넣기 */
-.cont>h5>a:hover{
+.cont > h5 > a:hover {
     /* 박스그림자 bsh
         box-shadow: x y blur spread 색;
         (내부그림자는 inset 씀)
@@ -182,7 +182,7 @@
 }
 
 /* 메인 공통 article 박스 디자인 */
-.cont article{
+.cont article {
     /* 구분선: 보더 위 bdt */
     border-top: 2px dashed #ccc;
     /* 마진위 mt */
@@ -195,7 +195,7 @@
 
 /* 기사관련타이틀 h5 */
 /* .cont>h5와 구분하기 위해 중간경로 article씀 */
-.cont article h5{
+.cont article h5 {
     /* 내용만큼 자동크기 위해 inline-block */
     display: inline-block;
     /* 패딩: 위아래 양쪽 */
@@ -221,9 +221,9 @@
 }
 
 /* 개별파트 타이틀 h3 */
-.cont h3{
+.cont h3 {
     /* 글자체 ff: 웹폰트 */
-    font-family: 'Gothic A1', sans-serif;
+    font-family: "Gothic A1", sans-serif;
     /* 글자 두께: 얇게 (기본값) */
     font-weight: normal;
     /* 글자 크기 fz */
@@ -235,7 +235,7 @@
 }
 
 /* 주해박스 */
-.desc div{
+.desc div {
     /* 패딩 p */
     padding: 20px 5px 0;
     /* 줄간격 lh */
@@ -247,9 +247,9 @@
 }
 
 /* 인용박스 */
-.qb blockquote{
+.qb blockquote {
     /* 기본마진없앰 */
-    margin: 0;  
+    margin: 0;
     /* 패딩 p */
     padding: 20px 5px 0;
     /* 줄간격 lh */
@@ -263,7 +263,7 @@
 }
 
 /* 오늘의 작품 & 느낌 */
-.work{
+.work {
     /* 글자중앙 tac */
     text-align: center;
     /* 배경색 bgc */
@@ -287,20 +287,20 @@
 }
 
 /* 작품명 */
-.work figcaption{
-    font-family: 'Noto Serif KR', serif;  
+.work figcaption {
+    font-family: "Noto Serif KR", serif;
 }
-.work figcaption cite{
-/* 기본 이탤릭 해제 fsn */
-    font-style: normal; 
+.work figcaption cite {
+    /* 기본 이탤릭 해제 fsn */
+    font-style: normal;
 }
 /* 작품이미지 */
-.work img{
+.work img {
     border: 15px ridge goldenrod;
 }
 
 /* 파트별 a링크 요소 공통 디자인 */
-.cont article a{
+.cont article a {
     /* 글자크기 fz */
     font-size: 17px;
     /* 줄간격 lh */
@@ -310,7 +310,7 @@
 }
 
 /* 가상클래스 hover 오버시 */
-.cont article a:hover{
+.cont article a:hover {
     /* 글자색 c */
     color: greenyellow;
     /* 글자그림자 ts */
@@ -318,7 +318,7 @@
 }
 
 /* 공통 ul */
-.cont article ul{
+.cont article ul {
     /* 리스트 타입 lit*/
     list-style: "🐱‍🚀";
     /* 
@@ -329,7 +329,7 @@
 }
 
 /* 공통 ol */
-.cont article ol{
+.cont article ol {
     /* 리스트 타입 lit */
     list-style-type: upper-roman;
     /* upper-roman 로마자 대문자 */
@@ -344,18 +344,18 @@
     요소:last-child > 마지막째 자식요소
 */
 /* 첫번째 li */
-.cont article ul li:first-child a{
+.cont article ul li:first-child a {
     color: red;
 }
-.cont article ul li:nth-child(2) a{
+.cont article ul li:nth-child(2) a {
     color: green;
 }
-.cont article ul li:last-child a{
+.cont article ul li:last-child a {
     color: blue;
 }
 /* 블릿과 글자사이 간격주기 */
 .cont article ul li,
-.cont article ol li{
+.cont article ol li {
     /* 패딩 left: 블릿 뒤쪽이 적용 */
     padding-left: 10px;
 }
@@ -369,9 +369,9 @@
 
 /* 분야별 뉴스 */
 /* 각 분야별 dt 공통 디자인 */
-.secnews dt{
+.secnews dt {
     /* 글자체: 웹폰트 */
-    font-family: 'Noto Serif KR', sans-serif;
+    font-family: "Noto Serif KR", sans-serif;
     /* 글자 크기만큼 디자인 적용위해 dib */
     display: inline-block;
     /* 보더 bd */
@@ -389,7 +389,7 @@
     box-shadow: 0 0 5px 3px rgba(37, 92, 11, 0.397);
 }
 /* 앞에 dd가 있는 dt만 marging-top 밀기 */
-.secnews dd+dt{
+.secnews dd + dt {
     /* margin-top 밀기 */
     margin-top: 20px;
 }
@@ -404,18 +404,75 @@
 
 /* dt별 글자색 다르게 하기 */
 /* dt는 형제중 dd가 섞여있어서 -of-type을 사용 */
-.secnews dt:first-of-type{
+.secnews dt:first-of-type {
     color: rgb(230, 53, 162);
 }
-.secnews dt:nth-of-type(2){
+.secnews dt:nth-of-type(2) {
     color: rgb(216, 24, 216);
 }
-.secnews dt:last-of-type{
+.secnews dt:last-of-type {
     color: rgb(135, 49, 233);
 }
 
 /* dd공통 */
-.secnews dd{
+.secnews dd {
     /* 왼쪽 마진 ml */
     margin-left: 100px;
+}
+
+/* 사진뉴스 테이블박스 */
+.pnews table{
+    /* 가로중앙이동: 마영오 > 블록요소 또는 table에 적용됨(inline에는 적용안됨) */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    /* 테이블 기본 사이간격 없애기 */
+    border-collapse: collapse;
+    /* seperate(기본값) */
+}
+
+/* 
+    tr이나 td에 child 선택자를 사용가능
+    왜? 같은 종류의 요소만 올 수 있으므로
+*/
+
+/* 첫번째 td - 숫자부분 */
+.pnews td:first-child{
+    /* 가로크기 w */
+    width: 50px;
+    /* 세로크기 h */
+    height: 70px;
+    /* 인라인 가로중앙 */
+    text-align: center;
+    /* 배경색 */
+    background-color: #ccc;
+}
+
+/* 두번째 td */
+.pnews td:nth-child(2){
+    /* 배경색 */
+    background-color: #f5f3f3;
+    /* 양쪽패딩: 위아래 양쪽 */
+    padding: 0 20px;
+}
+
+/* 세번째 td */
+.pnews td:last-child{
+    background-color: #f5f3f3;
+    /* 오른쪽 패딩 */
+    padding-right: 7px;
+}
+
+/* 사진뉴스 이미지 */
+.pnews img{
+    height: 70px;
+    /* 이미지는 한쪽만 크기줄때 나머지는 자동비율유지 */
+    /* 세로정렬 */
+    vertical-align: middle;
+    /* td에서만 세로정렬이 적용되고 일반적으로는 vertical-align은 인라인요소간 세로방향 정렬 */
+}
+
+/* 앞에 tr이 있는 tr만 하위 td에 디자인 */
+.pnews tr+tr td{
+    /* 보더탑 bdt */
+    border-top: 2px solid #ccc;
 }
