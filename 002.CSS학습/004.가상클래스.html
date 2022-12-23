@@ -133,7 +133,10 @@
             margin: 0 auto;
             /* 내부 인라인요소 오른쪽정렬 */
             text-align: right;
-            outline: 1px solid red;
+
+            /* outline: 1px solid red; */
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         /* 
@@ -151,10 +154,10 @@
             list-style: none; /* lin */
         }
 
-        /* ul 기본 리셋하기 */
-        ul.part1{
+        /* 부모박스 셋팅 */
+        ul.part1, div.part2{
             width: 800px;
-            margin: 0 auto;
+            margin: 30px auto;
             padding: 20px;
             border: 2px solid #ccc;
             /* 둥근모서리 */
@@ -169,6 +172,8 @@
             [ font 한 번에 셋팅하기 ]
             font : 스타일 두께 크기/줄간격 글자체
             font : 스두크/줄체
+            > font 한 번에 쓰기에서 글자체는 필수
+            > 2개이상 셋팅 필수
         */
 
         /* 모든 li에 오버시 손가락모양 */
@@ -177,44 +182,46 @@
             cursor: grab;
         }
 
-        /* 1번 li */
-        /* 40px 궁서 red */
+        /* 1번 li
+            40px 궁서 red */
         .part1 li:first-child{
             font: 40px "궁서";
             /* 글자색 */
             color: red;
         }
-        /* 오버시 글자크기 50px
-        글자색 blueviolet */
+        /* 오버시
+            50px blueviolet */
         .part1 li:first-child:hover{
             font-size: 50px;
             color: blueviolet;
         }
 
-        /* 2번째 li */
-        /* 30px 굴림 lightcoral bold */
+        /* 2번째 li
+            30px 굴림 lightcoral bold */
         .part1 li:nth-child(2){
             font: bold 30px "굴림";
             color: lightsalmon;
         }
-        /* 오버시 글자색 skyblue */
+        /* 오버시
+            skyblue */
         .part1 li:nth-child(2):hover{
             color: skyblue;
         }
 
-        /* 3번째 li */
-        /* italic bold 24px 돋움 brown */
+        /* 3번째 li
+            italic bold 24px 돋움 brown */
         .part1 li:nth-child(3){
             font: italic bold 24px "돋움";
             color: brown;
         }
-        /* 오버시 글자 스타일 normal */
+        /* 오버시
+            normal */
         .part1 li:nth-child(3):hover{
             font-style: normal;
         }
 
-        /* 4번째 li */
-        /* 50px 궁서 dodgerblue */
+        /* 4번째 li
+            50px 궁서 dodgerblue */
         .part1 li:nth-child(4){
             font: 50px "궁서";
             color: dodgerblue;
@@ -254,8 +261,8 @@
             color: darkblue;
         }
 
-        /* 마지막 li 변경하기 */
-        /* 40px 맑은 고딕 coral */
+        /* 마지막 li 변경하기
+            40px 맑은 고딕 coral */
         body .part1 li:last-child{
             font: 40px "맑은 고딕";
             color: coral;
@@ -267,6 +274,43 @@
             이것의 우선순위를 쉽게 변경하려면 상위요소를 써주면 됨
             (!important는 되도록 쓰지말 것)
         */
+
+        /* 두번째 파트
+        > 여러종류의 요소가 섞여있으면
+            first-of-type / nth-of-type(n) / last-of-type 사용 */
+
+        /* 두번째 div
+            30px 궁서 blueviolet */
+        .part2 div:nth-of-type(2){
+            font: 30px "궁서";
+            color: blueviolet;
+        }
+
+        /* 첫번째 i
+            bold 20px palevioletred */
+        .part2 i:first-of-type{
+            font-weight: bold;
+            font-size: 20px;
+            color: palevioletred;
+        }
+
+        /* 세번째 div이후 div형제요소 모두 */
+        /* .part2 div:nth-of-type(3)~div{
+            font-family: "궁서체";
+            color: red;
+        } */
+
+        /* 세번째 div이후 i형제요소 모두 */
+        /* .part2 div:nth-of-type(3)~i{
+            font-family: "궁서체";
+            color: red;
+        } */
+
+        /* 세번째 div이후 모든형제요소(*) */
+        .part2 div:nth-of-type(3)~*{
+            font-family: "궁서체";
+            color: red;
+        }
 
         /* 
         [ CSS 선택자 우선순위 ]
