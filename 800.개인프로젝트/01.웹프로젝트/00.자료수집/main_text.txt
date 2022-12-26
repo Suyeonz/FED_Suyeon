@@ -77,3 +77,18 @@ Adopt an animal
 		Regular updates
 			FOR YOUR SELF
 			AS A GIFT
+
+SIGN UP TO OUR NEWSLETTER
+	Sign up to our newsletter and keep up-to-date with everything going on at International Animal Rescue.
+	First name
+	Last name
+	Email address
+		I have read and agree to the privacy policy
+		Privacy policy.
+	CAPTCHA
+		This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.
+	SUBMIT
+
+DONATE
+ADOPT
+SHOP

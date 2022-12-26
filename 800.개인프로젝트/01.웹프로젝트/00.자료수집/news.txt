@@ -1,0 +1,6 @@
+NEWS
+    Species
+        Any
+    Animal
+        Any
+            APPLY
