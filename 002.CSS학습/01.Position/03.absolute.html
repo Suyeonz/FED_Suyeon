@@ -187,6 +187,33 @@
             /* 부모는 .s8 */
             border: 4px dotted red;
         }
+
+        /* absolute끼리느 서로 겹침 */
+        .absimg{
+            width: 92px;
+            height: 115px;
+            border: 10px ridge gold;
+        }
+
+        .absimg img{
+            position: absolute;
+            /* gentle absolute
+            부모자격이 없는 일반 static 요소여도 그 자리에 가만히 있음
+            > absolute 이미지끼리는 서로 겹쳐지고 위, 아래관계는 z-index로 변경가능 */
+        }
+
+        /* 두번째 이미지 닥스만 투명하게 */
+        .absimg img:last-child{
+            /* 투명도: opacity (0 투명, 1 불투명, 0.몇 반투명) */
+            opacity: 0; /* op숫자 */
+            /* 트래지션: transition - trs */
+            transition:  .5s;
+        }
+
+        /* 부모박스 오버시 닥스 보이기 */
+        .absimg:hover img:last-child{
+            opacity: 1;
+        }
         </style>
 </head>
 <body>
@@ -200,6 +227,12 @@
     <!-- absolute : 판타롱스타킹 -->
     <div class="a5">
         <img src="./images/ab2.jpg" alt="타노스">
+    </div>
+
+    <!-- absolute끼리느 서로 겹침 -->
+    <div class="absimg">
+        <img src="./images/ab3.jpg" alt="토르">
+        <img src="./images/ab4.jpg" alt="닥스">
     </div>
 
     <!-- 부모를 찾는 absolute -->
