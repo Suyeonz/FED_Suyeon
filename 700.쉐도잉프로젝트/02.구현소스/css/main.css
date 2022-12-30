@@ -8,9 +8,9 @@
 @import url(common.css);
 
 /* 공사중 표시 */
-body *{
+/* body *{
     outline: 1px dotted red;
-}
+} */
 
 /* 컨텐츠파트 최상위부모 */
 body{
@@ -74,6 +74,12 @@ body{
     /* 배경넣기 */
     background: url(../images/eachBG.jpg) no-repeat bottom/cover;
 
+    /* 둥근모서리: 왼쪽위부터 시계방향 */
+    border-radius: 20px 5px 5px 20px;
+
+    /* 윗쪽 여백 */
+    margin-top: 20px;
+
     /* 트랜지션 - 두 가지 변화 상태를 애니메이션해주는 속성
     transition: 속성 시간 이징 지연 */
     transition: height .4s;
@@ -121,6 +127,8 @@ body{
 /* 캐릭터 첫번째 문단 첫글자 가상요소로 디자인 변경하기 */
 .cd p:first-child::first-letter{
     font-size: 50px;
+    /* 글자크기로 인해 줄간격 조정 */
+    line-height: 0.9;
     color: lightblue;
     /* 그림자로 글자 테두리주기 - blur 없는 그림자 4개 사용 */
     text-shadow: 1px 0  #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
