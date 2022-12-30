@@ -93,6 +93,21 @@ body{
     letter-spacing: -1px;
 }
 
+/* 캐릭터 타이틀 앞 아이콘 가상요소로 넣기 */
+.cd h3::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 35px;
+    vertical-align: -6px;
+    margin-right: 5px;
+    background-color: red;
+    background: url(../images/bg_logo_a_01.png) no-repeat -144px -181px;
+    /* 배경이미지위치값은 본 이미지를 그림판으로 열어서
+    마우스 커서 위치에 따라 표시되는 x, y축 좌표값을 
+    마이너스 기호를 붙여서 가로, 세로수능로 써주면 정확한 위치가 됨 */
+}
+
 /* 캐릭터 설명 문단 */
 .cd p{
     font-family: 'Single Day', 'ZCOOL KuaiLe', 'cursive';
@@ -101,6 +116,36 @@ body{
     padding: 10px;
     /* 양쪽 정렬 justify - taj */
     text-align: justify;
+}
+
+/* 캐릭터 첫번째 문단 첫글자 가상요소로 디자인 변경하기 */
+.cd p:first-child::first-letter{
+    font-size: 50px;
+    color: lightblue;
+    /* 그림자로 글자 테두리주기 - blur 없는 그림자 4개 사용 */
+    text-shadow: 1px 0  #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
+}
+
+/* 각 캐릭터 박스별 첫글자 색 변경하기 */
+.cat:nth-child(2) p:first-child:first-letter{
+    font-size: 50px;
+    color: orange;
+    /* 그림자로 글자 테두리주기 - blur 없는 그림자 4개 사용 */
+    text-shadow: 1px 0  #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
+}
+
+.cat:nth-child(3) p:first-child:first-letter{
+    font-size: 50px;
+    color: lightslategray;
+    /* 그림자로 글자 테두리주기 - blur 없는 그림자 4개 사용 */
+    text-shadow: 1px 0  #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
+}
+
+.cat:nth-child(4) p:first-child:first-letter{
+    font-size: 50px;
+    color: lightcoral;
+    /* 그림자로 글자 테두리주기 - blur 없는 그림자 4개 사용 */
+    text-shadow: 1px 0  #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
 }
 
 /* 캐릭터 이미지 박스 */
@@ -126,7 +171,7 @@ body{
     text-align: center;
     /* 포지션이 셋팅없이 박스를 일반적으로 이동하는 방법은 margin을 이용한 이동(margin-top, margin-left)
     %단위일 경우 margin-top은 height, margin-left는 width가 기준하여 상대적인 단위를 잡음 */
-    margin: -21%;
+    margin-top: -21%;
 }
 
 /* 캐릭터 이름 이미지 */
