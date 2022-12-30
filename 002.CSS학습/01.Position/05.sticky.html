@@ -18,6 +18,15 @@
                 2. 원리: 처음에 relative하게(위치값 left 적용) 가만히 있다가
                 top 위치값(보이는 화면 기준) 설정 시 스크롤이 해당 위치의 적용요소에 도달할 때 요소를 fixed하게 화면에 고정
                     > 만약 top값을 설정하지 않으면 relative와 유사하게 그대로 위치
+
+                3. 주의사항
+                    1) 전체 스크롤시엔 적용요소가 body 바로 아래 있어야한다.
+                    2) 부모요소 중 
+                        overflow: auto / hidden / scroll 이 적용된 경우 안됨
+                        (이유: 스크롤이 이용한 방법이기 때문-visible인 경우만됨)
+                    3) 특정 박스 하위요소인 경우 스티키는 박스내부에서만
+                        보이는 화면 기준으로 작동하기 때문에 
+                        반드시 height값이 셋팅되어 있어야함!
             *******************************************************************************/ 
 
             width: 600px !important;
@@ -228,10 +237,11 @@
             height: 100%;
             /* 글자세로모드 */
             writing-mode: vertical-lr;
-            background-color: lightblue;
+            background-color: lightgreen;
             padding-left: 20px;
             /* 둥근모서리: 왼쪽위, 왼쪽아래 boder-radius: 왼위 오른위 오른아래 왼아래 / 왼쪽위부터 시계방향 */
             border-radius: 20px 0 0 20px;
+            box-shadow: inset 0 0 10PX #000;
         }
 
         .f3 img{
@@ -240,11 +250,30 @@
             vertical-align: middle;
         }
 
+        /* 스티키를 싸고 있는 .s7박스에 높이값 주기
+        > 그래야 내부박스의 스티키가 적용됨
+        > 그리고 overflow 설정값에 유의 */
+        .s7{
+            /* 
+            overflow: visible; > 가능(없어도 기본값)
+
+            overflow: hidden; > 안됨
+            overflow: scroll; > 안됨
+            overflow: auto; > 안됨
+            > 조상요소 중에 있어도 적용 안됨
+             */
+            
+             /* 스티키 부모높이값 필수 */
+            height: 600px;
+        }
+
         .stkbtn{
             position: sticky;
             top: 60%;
             /* top은 보이는 화면 기준 위치임 */
             font-size: 50px;
+            /* 가장 위 */
+            z-index: 999;
         }
         </style>
 </head>
@@ -297,13 +326,13 @@
                         <img src="./images/ab0.jpg" alt="포스터">
                         <span>포스터보기</span>
                     </div>
-
-                    
                 </div>
+                <!-- 스티커 버튼 -->
+                <button class="stkbtn">나는 스티키!!!</button>
             </div>
         </div>
     </div>
-<!-- 스티커 버튼 -->
-<button class="stkbtn">나는 스티키!!!</button>
+    <!-- 스티커 버튼 -->
+    <button class="stkbtn">나는 스티키!!!</button>
 </body>
 </html>
