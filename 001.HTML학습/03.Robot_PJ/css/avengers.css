@@ -144,14 +144,24 @@ html,body{
         3. cover : 박스를 비율에 맞게 채움
             -> 빈틈없이 채우며 배경cover와
             유사한 효과를 준다! 
-    */
-
-
+    */ 
+    
     /* 이미지 둥글게 */
     border-radius: 50%;
-
+    
     /* 글로우효과 */
     box-shadow: 0 0 30px 10px lightgreen;
+
+    
+    /* 트랜지션: 속시이지 trs */
+    transition: transform .8s;
+}
+
+/* 오버시 이미지 변경 */
+body:hover .cbx>img{
+    
+    /* 트랜스폼 회전하기 tfry */
+    transform: rotateY(720deg);
 }
 
 /* body에 오버시 전체 opacity 보이게하기 */
