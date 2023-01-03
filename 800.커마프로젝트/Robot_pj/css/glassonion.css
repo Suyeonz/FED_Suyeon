@@ -295,12 +295,12 @@ body:hover .cbx:nth-child(5){
 }
 
 /* 가상클래스로 화살표모양 넣기 */
-#pg1 .gobtn::after{
-    content: '👇';
+#pg1 .gobtn::before{
+    content: '🎞';
 }
 
 #pg2 .gobtn::after{
-    content: '👆';
+    content: '🔼';
 }
 
 /* 개별위치 */
@@ -314,7 +314,5 @@ body:hover .cbx:nth-child(5){
 
 /* 오버시 a변경 */
 .gobtn:hover{
-    color: hotpink;
-    text-decoration: overline;
-    text-decoration-style: wavy;
+    color: red;
 }
