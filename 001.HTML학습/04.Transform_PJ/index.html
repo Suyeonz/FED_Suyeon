@@ -31,7 +31,8 @@
             border: 10px solid lime;
             border-radius: 20px;
             padding: 20px;
-            text-align: center;
+            margin: 100px auto;
+            box-sizing: border-box;
         }
 
         /* 가상요소로 clear셋팅 */
@@ -215,7 +216,7 @@
             height: 200px;
             /* 가운데 정렬 풀기 */
             text-align: left;
-            outline: 2px dashed lime;
+            /* outline: 2px dashed lime; */
         }
         
         /* 이미지에 겹치도록 앱솔루트 포지션 셋팅 */
@@ -230,7 +231,7 @@
             /* 0도 회전하기 */
             transform: rotateY(0deg);
             /* 트랜지션: 속시이지 - 0.4초 기다림 */
-            transition: .4s ,4s;
+            transition: .4s ease-out .4s;
         }
 
         /* 2. 보검 오버시 */
@@ -238,7 +239,8 @@
             /* 90도 회전하기 */
             transform: rotateY(90deg);
             /* 트랜지션: 속시이지 - 기다림없음 */
-            transition: .4s;
+            transition: .4s ease-in;
+            /* ease-in 처음에 천천히 나중엔 등속도 */
         }
 
         /* 3. 유정 원본 */
@@ -246,15 +248,16 @@
             /* 90도 회전하기(처음상태) */
             transform: rotateY(90deg);
             /* 트랜지션: 속시이지 - 기다림없음 */
-            transition: .4s;
+            transition: .4s ease-in;
         }
 
-        /* 4. 유졍 오버시 */
+        /* 4. 유정 오버시 */
         #trans10:hover img:first-child{
             /* 0도 회전하기 */
             transform: rotateY(0deg);
             /* 트랜지션: 속시이지 - 0.4초 기다림 */
-            transition: .4s ,4s;
+            transition: .4s ease-out .4s;
+            /* ease-out 나중에 천천히 처음엔 등속도 */
         }    
     </style>
 </head>
