@@ -37,11 +37,11 @@ body *{
     /* 부모자격 - 하위 div들 */
     position: relative;
     width: 250px;
-    height: 250px;
+    height: 150px;
     /* 마영오 */
     margin: 0 auto;
     /* 턱깎기 */
-    border-radius: 30px 30px 50% 50%;
+    /* border-radius: 30px 30px 50% 50%; */
 }
 
 /* 로봇머리 직계하위 div는 모두 absolute */
@@ -54,15 +54,41 @@ body *{
     content: '';
     display: block;
     position: absolute;
-    top: -153px;
-    left: -60px;
+    top: -100px;
+    left: -35px;
     /* 부모는? .head */
-    width: 400px;
+    width: 320px;
     height: 300px;
     background: url(../images/hair.png) no-repeat 0/100% 100%;
     /* 맨위 */
     z-index: 1;
 }
+
+/* 머리박스에 오버시 가상요소 가발변경하기 */
+.head:hover::before{
+    top: -183px;
+    left: -137px;
+    width: 548px;
+    height: 386px;
+    background: url(../images/hair2.png) no-repeat 0/100% 100%;
+    z-index: 0;
+}
+
+/* 머리박스 가상요소로 턱만들기 */
+.head::after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    /* 부모박스 높이만큼 밀어줌 */
+    top: 100%;
+    width: 250px;
+    height: 100px;
+    background: url(../images/metal01.jpg) no-repeat bottom/100%;
+    /* 턱깎기 */
+    clip-path: polygon(0 0, 30% 100%, 60% 100%, 100% 0);
+}
+
 /* 눈공통 */
 .eye{
     width: 50px;
@@ -107,12 +133,37 @@ body *{
 
 /* 입 */
 .mouth{
-    bottom: 30px;
+    top: 175px;
     left: 78px;
     width: 90px;
     height: 38px;
     background: url(../images/mouth.png) no-repeat 0/100% 100%;
 }
+
+/* 입옆에 별모양점 가상요소로 만들기 */
+.mouth::before,.mouth::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    /* 부모는? .mouth */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 238, 0);
+    /* 삼각형 클리핑 속성으로 만들기 */
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+.mouth::after{
+    transform: rotate(180deg) translateY(-30%);
+}
+/* 
+    [ CSS 클리핑 속성 ]
+    > clip-path: polygon(x1 y1, x2 y2, ...)
+    > 각 좌표쌍은 띄어쓰기로 각 점은 콤마로 구분
+    > 각 점을 연결하여 도형모양만 출력
+    > px은 각 도형 크기 내부의 수치로 쓰고 %는 도형을 기준한 위치를 %로 나타냄
+*/
 
 /* 귀공통 */
 .ear{
