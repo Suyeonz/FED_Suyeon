@@ -158,7 +158,7 @@
             /* 스크린 */
             .screen {
                 position: absolute;
-                top: 307px;
+                top: 130px;
                 left: 50%;
                 /* 자기크기(width)절반 왼쪽이동(중앙쪽으로 이동) */
                 transform: translateX(-59%);
@@ -231,7 +231,7 @@
                 }
             }
             /* 1100px이하 미디어쿼리 끝 */
-            
+
             /* 1000px이하 미디어쿼리 시작 */
             @media screen and (max-width: 1000px) {
                 /* 1. 타이틀 변경하기 */
@@ -331,7 +331,7 @@
                 }
             }
             /* 810px이하 미디어쿼리 끝 */
-            
+
             /* 790px이하 미디어쿼리 시작 */
             @media screen and (max-width: 790px) {
                 /* 1. 타이틀 변경하기 */
@@ -351,12 +351,12 @@
                 }
             }
             /* 790px이하 미디어쿼리 끝 */
-            
-            /* 710px이하 미디어쿼리 시작 */
-            @media screen and (max-width: 710px) {
+
+            /* 770px이하 미디어쿼리 시작 */
+            @media screen and (max-width: 770px) {
                 /* 1. 타이틀 변경하기 */
                 .tit::after {
-                    content: "최대 710px이하";
+                    content: "최대 770px이하";
                     color: yellowgreen;
                 }
 
@@ -370,7 +370,44 @@
                     display: inline;
                 }
             }
-            /* 7100px이하 미디어쿼리 끝 */
+            /* 770px이하 미디어쿼리 끝 */
+
+            /******************************************************************** 
+            가로모드와 세로모드 변경코드
+            > 가로/세로 모드는 그 길이가 더 긴것을 기준한다. 모바일 전용이 아님
+            > 모바일 화면의 제한을 주려면 가로크기의 한계값을 설정하는 방법을 사용한다
+                예) 
+                @media screen and
+                (orientation:portrait) and
+                max-width: 1000px { CSS 코드 }
+            ********************************************************************/
+            /* 세로모드 시작 */
+            @media screen and (orientation: portrait) and (max-width: 1000px) {
+
+            }
+            /* 세로모드 끝 */
+
+            /* 가로모드 시작 */
+            @media screen and (orientation: landscape) and (max-width: 1000px) {
+                /* 타이틀 위치변경 */
+                .tit {
+                    text-align: left;
+                    text-indent: 15px;
+                }
+
+                /* .bx의 배경속성변경 */
+                .bx {
+                    background-size: auto 53%;
+                    background-position: center -100px;
+                }
+
+                /* 스크린 위치값변경 */
+                .screen {
+                    top: 18px;
+                    transform: translateX(-49%);
+                }
+            }
+            /* 가로모드 끝 */
         </style>
     </head>
     <body>
