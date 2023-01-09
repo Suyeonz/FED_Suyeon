@@ -158,7 +158,7 @@
             /* 스크린 */
             .screen {
                 position: absolute;
-                top: 130px;
+                top: 307px;
                 left: 50%;
                 /* 자기크기(width)절반 왼쪽이동(중앙쪽으로 이동) */
                 transform: translateX(-59%);
@@ -383,7 +383,14 @@
             ********************************************************************/
             /* 세로모드 시작 */
             @media screen and (orientation: portrait) and (max-width: 1000px) {
-
+                .bx {
+                    background-size: auto 60%;
+                    background-position: top;
+                }
+                /* 스크린 위치값변경 */
+                .screen {
+                    top: 130px;
+                }
             }
             /* 세로모드 끝 */
 
