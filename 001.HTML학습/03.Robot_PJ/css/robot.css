@@ -183,8 +183,6 @@ body *{
     border-radius: 0 50% 50% 0;
 }
 
-/************************** 3. 하단영역 **************************/
-
 /************** 로봇 몸통 **************/
 .body{
     /* 부모자격 - 하위 직계 div들 */
@@ -240,3 +238,31 @@ body *{
 /* 왼어깨 */
 /* 오른어깨 */
 /* TV */
+
+/************************** 3. 하단영역 **************************/
+#info{
+    /* 글자셋팅 */
+    color: #fff;
+    font: 30px 'Black Ops One';
+    text-shadow: 2px 2px 2px #000;
+
+    /* 박스셋팅 */
+    background-color: rgba(0, 0, 0, 0.425);
+    text-align: center;
+    padding: 50px;
+}
+/* 속박스 가상요소로 아이콘 모양 넣기 */
+.info::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    /* 배경넣기 */
+    background: pink url(../images/robot_03.png) no-repeat;
+    background-position: -7px 1px;
+    background-size: 50px;
+    /* 인라인 요소간 세로정렬: va */
+    vertical-align: top;
+}
