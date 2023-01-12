@@ -14,3 +14,9 @@ ul,ol{
     /* 블릿, 숫자없앰 */
     list-style-type: none;
 }
+
+/* 3. root - html 글자크기셋팅 */
+html{
+    /* rme단위 계산 편의상 10px */
+    font-size: 10px;
+}
