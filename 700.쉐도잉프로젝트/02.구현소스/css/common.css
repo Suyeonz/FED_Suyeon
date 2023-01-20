@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* 공통모듈 디자인 CSS - common.css
-> 상단영역, 하단영역 */
+> 상단영역, 하단영역 디자인 */
 
 /**************** 1. 상단영역 ****************/
 /* 겉박스 */
@@ -151,11 +151,21 @@ nav.gnb ul{
     /* outline: 2px dashed red; */
 }
 .smenu a{
+    /* 트랜스폼은 inline일 때 적용안됨 */
+    display: block;
     font-size: 1.4rem;
     line-height: 2;
     color: #222;
     text-decoration: none;
+    /* 트랜지션 */
+    transition: .3s;
 }
+/* 서브메뉴 a 오버시 확대 */
+.smenu a:hover{
+    transform: scale(1.1);
+    color: orangered;
+}
+
 /* 1-3. 탑메뉴 */
 aside.tmenu{
     position: absolute;
@@ -229,7 +239,7 @@ aside.tmenu{
 /* 모바일 햄버거 버튼 */
 .ham{
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 10px;
     width: 50px;
     height: 50px;
@@ -298,7 +308,7 @@ aside.tmenu{
     line-height: 2;
 
     /* 박스셋팅 */
-    min-width: 804px;
+    max-width: 804px;
     margin: 0 auto;
     padding: 10px;
     border: 4px double #222;
@@ -312,7 +322,7 @@ aside.tmenu{
 /*************** 3-4. 바로가기 ***************/
 .brand{
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
     /* 나의 부모는? .info */
 }
