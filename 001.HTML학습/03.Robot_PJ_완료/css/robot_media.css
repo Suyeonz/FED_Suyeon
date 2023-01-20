@@ -53,6 +53,7 @@
 /* 500px 이하 */
 @media screen and (max-width: 500px) {
     .html body{
+        position: relative;
         /* 보이는화면 가로크기 채움 */
         width: 100vw;
         /* x축 스크롤 없애기 */
