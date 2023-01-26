@@ -46,7 +46,7 @@ html,body{
     font-family: 'Audiowide', cursive;
     font-size: 3.4rem;
     /* 트랜지션: 속시이지 */
-    transition: .3s ease-in;
+    transition: .4s ease-out;
 }
 
 /* 엔터박스 오버시 글자박스변경 */
@@ -58,7 +58,7 @@ html,body{
 /* 엔터박스 로고 이미지 */
 #enter img{
     /* 트랜지션: 속시이지 */
-    transition: .4s .2s ease-in-out;
+    /* transition: .3s ease-out .2s; */
 }
 
 /* 엔터박스 오버시 로고 이미지 */
