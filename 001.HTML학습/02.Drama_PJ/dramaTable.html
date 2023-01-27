@@ -8,9 +8,9 @@
     <body>
         <!-- 한국 최신 드라마 리스트 -->
         <table class="tbl" id="drama">
-            <!-- 1. 테이블 제목 -->
+            <!-- 1. 테이블제목 -->
             <caption>한국 최신 드라마 리스트</caption>
-            <!-- 2. 테이블 머릿부분 -->
+            <!-- 2. 테이블 상단부분 -->
             <thead>
                 <tr>
                     <th>번호</th>
@@ -114,20 +114,25 @@
                     <td>오후10:50</td>
                     <td>10부작</td>
                 </tr>
+
             </tbody>
             <!-- 4. 테이블 하단부분 -->
             <tfoot>
-                <td colspan="7">
-                    ◀ <a href="#">1</a> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> | <a href="#">6</a> | <a href="#">7</a> | <a href="#">8</a> | <a href="#">9</a> | <a href="#">10</a> ▶
-                </td>
-                <!-- 
-                    [ 테이블 colspan 속성 ]
-                    - td를 합칠 때 쓰는 속성
-                    - column 컬럼(기둥) + span(범위)
-                    - 합칠 td의 개수만큼 숫자를 씀
-                 -->
+                <tr>
+                    <td colspan="7">
+                        ◀ <a href="#">1</a> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> | <a href="#">6</a> | <a href="#">7</a> | <a href="#">8</a> | <a href="#">9</a> | <a href="#">10</a> ▶
+                    </td>
+                    <!-- 
+                        [ 테이블 colspan 속성 ]
+                        - 같은 tr의 td셀을 합칠때쓴다!
+                        - column 컬럼(기둥) + span(범위)
+                        - 합칠 td의 개수만큼 숫자를 쓴다!
+                     -->
+                </tr>
             </tfoot>
+
         </table>
+        
         <!-- 
             [ 가장 복잡한 그룹요소인 테이블!!! ]
             1. table : 테이블 전체 부모요소
