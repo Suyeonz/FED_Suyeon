@@ -17,7 +17,7 @@ body{
     /* 한 번에 배경주기 + 여러 배경주기 */
     /* background: 색이반고윙/크 */
     /* 콤마(,)로 구분하여 여러 배경이미지를 넣을 수 있고 먼저 쓴 이미지가 위에 옴 */
-    background: url(../images/bg_logo_a_01.png) no-repeat fixed 10% 20%/10%,
+    background: url(../images/bg_logo_a_01.png) no-repeat fixed 10% 28%/10%,
     url(../images/bg_mainvisual.jpg) no-repeat
     fixed center/cover;
     /* 외부 CSS에서 이미지 경로를 잡을 때 주의사항
