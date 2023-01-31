@@ -13,7 +13,8 @@
         font-family: 'Noto Sans KR', sans-serif;
         */
 
-        html,body,h1,dl,dt,dd{
+        /* 초기화 */
+        html,body,h1,dl,dt,dd,ul,ol{
             margin: 0;
             padding: 0;
         }
@@ -41,6 +42,13 @@
         #top{
             /* 부모자격 */
             position: relative;
+            /* 트랜지션 */
+            transition: .4s ease-in-out;
+        }
+        /* #top에 오버시 자기자신 */
+        #top:hover{
+            /* 배경색 변경 */
+            background-color: #fff;
         }
         /* #top 가상요소로 배경색넣기 */
         #top::after{
@@ -73,12 +81,41 @@
             outline: 2px dashed yellow;
         }
 
+        /* 로고 */
+        .logo img{
+            height: 50px;
+        }
+        /* 로고 두번째 이미지 처음에 숨김 */
+        .logo img:last-child,
+        /* .store 두번째 이미지 처음에 숨김 */
+        .store img:last-child,
+        /* #top오버시 첫번째 로고 숨기기 */
+        #top:hover .logo img:first-child,
+        /* #top오버시 .store 첫번째 이미지 숨기기 */
+        #top:hover .store img:first-child{
+            display: none;
+        }
+        /* #top오버시 두번째 로고 보이기 */
+        #top:hover .logo img:last-child,
+        /* #top오버시 .store 두번째 이미지 보이기 */
+        #top:hover .store img:last-child{
+            display: inline;
+        }
+
         /* 네비게이션 박스 */
         .gnb{
-            z-index: 1;
             position: relative;
+            z-index: 1;
             /* 플렉스 박스 */
             display: flex;
+            height: 110px;
+            overflow: hidden;
+            /* 트랜지션 */
+            transition: .4s ease-in-out;
+        }
+        /* #top 오버시 GNB */
+        #top:hover .gnb{
+            height: 400px;
         }
 
         .gnb dl{
@@ -92,6 +129,15 @@
         .gnb dt{
             line-height: 110px;
         }
+        
+        .gnb dt a{
+            /* 트랜지션: 속시이지 */
+            transition: .4s ease-in-out;
+        }
+        /* #top오버시 dt a 글자색 변경 */
+        #top:hover .gnb dt a{
+            color: #222;
+        }
 
         /* 서브메뉴 */
         .gnb dd{
@@ -99,6 +145,13 @@
         }
         .gnb dd a{
             color: #222;
+        }
+        
+        /* 기타파트: .tlink */
+        .tlink{
+            /* 플렉스 박스 */
+            display: flex;
+            list-style: none;
         }
     </style>
 </head>
@@ -114,7 +167,12 @@
                 <!-- 1. 로고파트 -->
                 <div>
                     <h1 class="logo">
-                        <a href="#"><img src="./images/nav03/logo_w.png" alt="로고"></a>
+                        <a href="#">
+                            <!-- hover전 이미지 -->
+                            <img src="./images/nav03/logo_w.png" alt="로고">
+                            <!-- hover시 이미지 -->
+                            <img src="./images/nav03/logo_b.png" alt="로고">
+                        </a>
                     </h1>
                 </div>
                 <!-- 2. 네비파트 -->
@@ -260,12 +318,15 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./images/nav03/lang_i_w.png" alt="다국어아이콘">
+                                <img src="./images/nav03/png" alt="다국어아이콘">
                             </a>
                         </li>
-                        <li>
+                        <li class="store">
                             <a href="#">
+                                <!-- hover전 이미지 -->
                                 <img src="./images/nav03/store_i3_w.png" alt="스토어아이콘">
+                                <!-- hover시 이미지 -->
+                                <img src="./images/nav03/store_i3.png" alt="스토어아이콘">
                             </a>
                         </li>
                     </ul>
