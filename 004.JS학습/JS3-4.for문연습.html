@@ -78,27 +78,27 @@
                         //for(시;한;증){코드}
                         for (var j = 0; j < cnt; j++) {
                             Bcase.innerHTML += `<img src="./images/Minions.png" alt="미니언즈">`;
-                        } /////// for문 /////////////
+                        }; /////// for문 /////////////
+                    }; ////// click 이벤트함수 //////////////////
 
-                        // mini.item(순번)
-                        // mini[순번]
-                    }; //////// for문 ////////////////////
+                    // mini.item(순번)
+                    // mini[순번]
+                }; //////// for문 ////////////////////
 
-                    // 4. 리셋버튼 셋팅하기 /////////////////////////
-                    // 대상: 이벤트대상 - rbtn / 변경대상 - Bcase
-                    // 변경내용: Bcase의 내용지우기
-                    rbtn.onclick = function () {
-                        // 1. 호출하기
-                        console.log("다 지워~!");
-                        // 2. 파란상자내용 지우기
-                        Bcase.innerHTML = "";
-                    }; //////// click 이벤트 함수 ////////////
+                // 4. 리셋버튼 셋팅하기 /////////////////////////
+                // 대상: 이벤트대상 - rbtn / 변경대상 - Bcase
+                // 변경내용: Bcase의 내용지우기
+                rbtn.onclick = function () {
+                    // 1. 호출하기
+                    console.log("다 지워~!");
+                    // 2. 파란상자내용 지우기
+                    Bcase.innerHTML = "";
+                }; //////// click 이벤트 함수 ////////////
 
-                    // 리셋버튼 디자인변경
-                    rbtn.style.fontSize = "46px";
-                    rbtn.style.margin = "10px";
-                } ////// click 이벤트함수 /////////
-            } //////////////// loadFn 함수 //////////
+                // 리셋버튼 디자인변경
+                rbtn.style.fontSize = "46px";
+                rbtn.style.margin = "10px";
+            }; //////////////// loadFn 함수 //////////
             ////////////////////////////////////////
         </script>
     </head>
